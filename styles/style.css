@@ -1,0 +1,323 @@
+body {
+    padding: 10% 7%;
+    background-image: url('background.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    text-align: center;
+    font: 500 36px/55px 'Roboto';
+    text-transform: uppercase;
+    color: #000000;
+}
+
+.examples {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2%;
+}
+
+.examples-card {
+    position: relative;
+    width: 372px;
+    height: 372px;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 2%;
+    border-radius: 10px;
+    overflow: hidden;
+    -webkit-mask-image: -webkit-radial-gradient(white, black);
+}
+
+.examples-card__guarantee {
+    position: absolute;
+    top: 5%;
+    left: 6%;
+    width: 177px;
+    height: 30px;
+    background: #FF7647;
+    border-radius: 3px 0px 0px 3px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.4s ease-in-out;
+}
+
+.examples-card__guarantee-text {
+    font: 700 14px/11px 'Roboto';
+    color: #FFFFFF;
+}
+
+.examples-card:hover .examples-card__guarantee {
+    opacity: 1;
+}
+
+.examples-card__guarantee-icon {
+    position: absolute;
+    top: 0;
+    left: 95%;
+}
+
+.examples-card__image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out;
+    z-index: 0;
+}
+
+.examples-card:hover .examples-card__image {
+    transform: scale(1.1);
+}
+
+.examples-card__background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg, rgba(10, 34, 64, 0.1) 0%, #0A2240 100%);
+}
+
+.examples-card__content {
+    position: relative;
+    padding: 0 6% 5% 6%;
+    display: flex;
+    flex-direction: column;
+    z-index: 1;
+}
+
+.examples-card__title {
+    padding-top: 150px;
+    margin-bottom: 0;
+    font: 700 24px/32px 'Roboto';
+}
+
+.examples-card__link {
+    position: relative;
+    text-decoration: none;
+    color: #FFFFFF;
+}
+
+a:active {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.examples-card__link:hover:before {
+    transform: scaleX(1);
+    transform-origin: left;
+    width: 100%;
+}
+
+.examples-card__link::before {
+    content: '';
+    width: 0;
+    height: 2px;
+    background-color: #FFFFFF;
+    position: absolute;
+    left: 0;
+    bottom: 2px;
+    transition: width 0.5s;
+}
+
+.examples-card__description {
+    display: inline-block;
+    font: 400 16px/24px 'Open Sans';
+    color: #FFFFFF;
+}
+
+.examples-card__content-second {
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.examples-card__content-second.hidden {
+    display: none;
+}
+
+.hidden {
+    display: none;
+}
+
+.examples-card__price {
+    display: inline-block;
+    width: 120px;
+    font: 700 16px/24px 'Open Sans';
+    text-align: left;
+    color: #FFFFFF;
+}
+
+.examples-card__price-accent {
+    font: 700 24px/32px 'Roboto';
+    color: #FF4B77;
+}
+
+.examples-card__price-accent-sumbol {
+    font: 400 23px/32px 'Roboto';
+    color: #999999;
+}
+
+.examples-card__button {
+    padding: 11px 24px 13px 24px;
+    font: 700 16px/24px 'Open Sans';
+    text-align: center;
+    color: #FFFFFF;
+    background: #F91155;
+    border-radius: 5px;
+    border: none;
+    transition: background-color 0.3s, box-shadow 0.1s;
+}
+
+.examples-card__button:hover {
+    background-color: #D8003F;
+    box-shadow: 1px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.examples-card__button:active {
+    color: #F9637C;
+}
+
+.examples-card__reserved {
+    position: absolute;
+    width: 100%;
+    left: 185px;
+    bottom: -60px;
+    border-radius: 4px;
+    transform: translate(-50%, -50%);
+    display: none;
+    z-index: 3;
+    background: #3C3E43;
+}
+
+.examples-card__reserved-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.4);
+    display: none;
+    z-index: 3;
+}
+
+.examples-card__reserved-text {
+    padding: 20px 105px 20px 105px;
+    font: 400 14px/21px 'Open Sans';
+    text-align: center;
+    color: #FFFFFF;
+    background: #3C3E43;
+}
+
+.examples-card__reserved-text-accent {
+    text-decoration: none;
+    color: #F91155;
+}
+
+.examples-card__reserved-text-accent:hover {
+    text-decoration: underline;
+}
+
+.examples-card__reserved-text-accent:active {
+    color: #FF97B0;
+}
+
+@media (max-width: 1200px) {
+    body {
+        padding: 0 5%;
+    }
+
+    .examples-card {
+        width: 336px;
+        height: 420px;
+    }
+
+    .examples-card__content-second {
+        flex-direction: column;
+        align-items: flex-start
+    }
+
+    .examples-card__button {
+        width: 100%;
+    }
+
+    .examples-card__reserved {
+        height: 160px;
+        left: 168px;
+        bottom: -90px;
+        border-radius: 0px;
+    }
+
+    .examples-card__reserved-text {
+        padding: 35px 80px 20px 80px;
+        font: 400 14px/21px 'Open Sans';
+        text-align: center;
+        color: #FFFFFF;
+        background: #3C3E43;
+    }
+}
+
+@media (max-width: 441px) {
+    .examples-card {
+        margin-bottom: 10%;
+    }
+
+    body {
+        padding: 3%;
+    }
+
+    h1 {
+        font: 700 24px/32px 'Roboto';
+    }
+}
+
+@media (max-width: 369px) {
+    .examples-card__description {
+        font: 400 15px/20px 'Open Sans';
+    }
+}
+
+@media (max-width: 380px) {
+    .examples-card__title {
+        margin-bottom: -10px;
+        font: 700 23px/32px 'Roboto';
+    }
+
+    .examples-card__reserved {
+        width: 110%;
+        height: 150px;
+        left: 161px;
+    }
+}
+
+@media (max-width: 358px) {
+    .examples-card__title {
+        font: 700 20px/32px 'Roboto';
+    }
+
+    .examples-card__reserved {
+        width: 120%;
+        height: 150px;
+        left: 161px;
+    }
+
+    .examples-card__reserved-text {
+        padding: 35px 80px 20px 50px;
+    }
+}
